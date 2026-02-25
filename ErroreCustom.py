@@ -1,0 +1,2 @@
+class ErroreCustom(Exception):
+    pass
