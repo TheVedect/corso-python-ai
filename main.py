@@ -1,19 +1,23 @@
-import utils
+l = open("dati.txt", "r")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print(l.read())
+l.close()
 
+with open("dati.txt", "r") as f: # Meglio questa modalità, che chiude automaticamente f
+    contenuto = f.readlines()    # E mi consente di vedere il contenuto senza che rimanga aperto
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    numero = utils.somma_numeri(11, 25)
-    numero2 = utils.esponenziazione_numeri(0, 0)
-    print(numero2)
-    print("********")
-    print("*      *")
-    print("* ", numero," *")
-    print("*      *")
-    print("********")
+for line in contenuto:
+    print(line)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+with open("dati.txt", "a") as f:
+    f.write("\nPippo")
+
+with open("dati.txt", "r") as f: #Se voglio pulire dei nomi sporchi [Poi li salvo in un file nuovo]
+    nomi_puliti = [r.strip().title().replace("\n", "") for r in f.readlines()]
+
+"""
+r -> lettura
+w -> scrittura e sovrascrittura
+a -> append
+r+ -> lettura e scrittura
+"""
