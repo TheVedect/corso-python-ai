@@ -1,0 +1,5 @@
+id,nome,prezzo
+1,PC,999.0
+2,Monitor,699.0
+3,Mouse,99.0
+4,Tastiera,129.0
