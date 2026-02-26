@@ -1,5 +1,26 @@
 [
-  {"nome": "Ciccio","eta": 28},
-  {"nome": "Mimmo", "eta": 25},
-  {"nome": "Anna", "eta": 22}
-  ]
+    {
+        "nome": "Mario",
+        "eta": "30",
+        "citta": "Roma",
+        "seniority": "Senior"
+    },
+    {
+        "nome": "Anna",
+        "eta": "22",
+        "citta": "Bologna",
+        "seniority": "Junior"
+    },
+    {
+        "nome": "Paolo",
+        "eta": "29",
+        "citta": "Napoli",
+        "seniority": "Senior"
+    },
+    {
+        "nome": "Sara",
+        "eta": "26",
+        "citta": "Firenze",
+        "seniority": "Junior"
+    }
+]

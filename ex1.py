@@ -7,6 +7,7 @@ with open("dati_ex1.csv", "r", newline='') as f:
     reader = csv.DictReader(f)
     for row in reader:
         dataset.append(row)
+    print(dataset)
 
 with open("dati_ex1_nuovi.csv", "w", newline='') as f:
     nuovo_dataset = []
