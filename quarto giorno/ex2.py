@@ -49,7 +49,7 @@ with open("esercizio_dataset_csv_json.txt", "r") as f:
 
 aggiungi_seniority(utenti_validi)
 
-with open("utenti_validi.csv", "w",newline='') as f:
+with open("utenti_validi.csv", "w", newline='') as f:
     writer = csv.DictWriter(f, fieldnames=utenti_validi[0].keys())
     writer.writeheader()
     for dato in utenti_validi:
