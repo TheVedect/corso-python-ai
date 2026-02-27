@@ -1,0 +1,15 @@
+from Persona import Persona
+
+class Studente(Persona):
+    def __init__(self, nome, eta, corso):
+        super().__init__(nome, eta)
+        self.corso = corso
+
+    def saluta(self):
+        print(f"Ciao, mi chiamo {self.nome}, ho {self.eta} anni e studio {self.corso}!")
+
+    def saluta_come_una_persona_normale(self): #Non lo fa fare, perché non serve
+        super().saluta()
+
+ciccio = Studente("Ciccio", 25, "Python AI")
+ciccio.saluta()
