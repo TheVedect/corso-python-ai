@@ -14,3 +14,7 @@ with open("requests.csv", "r") as csvfile:
     richieste_valide = pipeline.esegui()
     for richiesta in richieste_valide:
         print(richiesta)
+
+with open('output.json', 'w') as outfile:
+    statistiche = pipeline.crea_statistiche(richieste_valide)
+    json.dump(statistiche, outfile, indent=4)

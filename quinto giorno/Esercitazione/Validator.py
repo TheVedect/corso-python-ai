@@ -11,9 +11,9 @@ class Validator:
                 if eta < 18:
                     continue
             except TypeError:
-                pass
+                continue
             except ValueError:
-                pass
+                continue
             richieste_valide.append(richiesta)
         return richieste_valide
 
@@ -26,9 +26,11 @@ class Validator:
         return richieste_sanificate
 
     def aggiungi_seniority(self, richieste):
-        richieste_seniority = [
-            "Junior" if int(richiesta["eta"]) < 25 else
-            "Adult" if int(richiesta["eta"]) < 40 else "Senior"
-            for richiesta in richieste
-        ]
-        return richieste_seniority
+        for richiesta in richieste:
+            if int(richiesta["eta"]) < 25:
+                richiesta["seniority"] = "Junior"
+            elif int(richiesta["eta"]) < 40:
+                richiesta["seniority"] = "Adult"
+            else:
+                richiesta["seniority"] = "Senior"
+        return richieste
